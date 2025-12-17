@@ -1,4 +1,4 @@
-"use client"; 
+"use client"; // Required for useState and useEffect
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -81,8 +81,7 @@ export default function WeatherPage() {
                             <h2>{currentWeather.name}, {currentWeather.sys.country}</h2>
                             <div className="temp-box">
                                 <p className="main-temp">{Math.round(currentWeather.main.temp)}°C</p>
-                                {/* USES YOUR CUSTOM SVG */}
-                                <img src="https://png.pngtree.com/png-vector/20250212/ourmid/pngtree-sun-clipart-colored-png-image_15451518.png" alt="Sun" className="sun-icon-custom" />
+                                <img src="/sun.png" alt="Sun" className="sun-icon-custom" />
                             </div>
                             <span className="description">{currentWeather.weather[0].description}</span>
                         </section>
